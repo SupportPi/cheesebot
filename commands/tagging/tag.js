@@ -48,6 +48,9 @@ module.exports = {
 			return interaction.reply({content: `Nickname length cannot exceed 32 characters!` });
 	
 		member.setNickname(`[${tag}] `  + basename ); 
-		return interaction.reply({ content: `${member.user.username} tagged! `})
+		if(tag === "Cheese")
+			return interaction.reply({ content: `Nice to cheese you ${basename}! `})
+		else
+			return interaction.reply({ content: `${member.user.username} tagged! `})
 	},
 };

@@ -33,9 +33,9 @@ module.exports = {
 		}
 
 		if (nick.length > 32) 
-			return interaction.reply({content: `Nickname length cannot exceed 32 characters!` });
+			return await interaction.reply({content: `Nickname length cannot exceed 32 characters!` });
 	
 		member.setNickname(nick); 
-		return interaction.reply({ content: `${member.user.username}'s nickname set! `});
+		return await interaction.reply({ content: `${member.user.username}'s nickname set! `});
 	},
 };
